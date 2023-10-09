@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+button {
+    text-decoration: none;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .selected {
+    border: none;
+    background-color: rgb(60, 118, 234);
+} */
+
+div {
+    height: 15vh;
+    width: 15vh;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+.selectedMatchOne {
+    background-color: blue;
+}
+
+.selectedMatchTwo {
+    background-color: red;
+}
+
+.selectedMatchThree {
+    background-color: yellow;
+}
+
+.selectedMatchFour {
+    background-color: purple;
+}
+
+.selectedMatchFive {
+    background-color: orange;
+}
