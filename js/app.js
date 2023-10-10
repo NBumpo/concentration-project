@@ -218,21 +218,41 @@ document.querySelector('.matchFourB').addEventListener('click', (e) => {
     return
 }
 )
+// FIVE ========
+document.querySelector('.matchFiveA').addEventListener('click', (e) => {
+    e.target.classList.add('selectedMatchFive',);
+    e.target.classList.add('clicked');
+    (varSelection += 1);
+    arrSelection.push('orange');
+    selectionCheck();
+    return
+}
+)
+document.querySelector('.matchFiveB').addEventListener('click', (e) => {
+    e.target.classList.add('selectedMatchFive',);
+    e.target.classList.add('clicked');
+    (varSelection += 1);
+    arrSelection.push('orange');
+    selectionCheck();
+    return
+}
+)
 function selectionCheck(){
-    if ((varSelection === 2) && (arrSelection[0] === arrSelection[1])){
-        varSelection = 0;
-        arrSelection = [];
+    if ((varSelection >= 2) && (arrSelection[0] === arrSelection[1])){
+        varSelection -= 2;
+        while(arrSelection.length) {
+            let pop = arrSelection.pop()
+            console.log(pop)
+        }
     const clickedList = document.getElementsByClassName('clicked');
-
-      (clickedList[1]).style.backgroundColor = ('green');
-    
+        console.log(clickedList);
 
       (clickedList[0]).style.backgroundColor = ('green');
-      
-    } else if ((varSelection === 2) && (arrSelection[0] !== arrSelection[1])){
-        varSelection = 0;
-        arrSelection = [];
-    document.querySelector('.matchOneA').classList.remove('selectedMatchOne');
+      (clickedList[1]).style.backgroundColor = ('green');
+      (clickedList[0].classList.remove('clicked'));
+      (clickedList[1].classList.remove('clicked'));
+    } else if (varSelection >= 2) {
+        document.querySelector('.matchOneA').classList.remove('selectedMatchOne');
     document.querySelector('.matchOneB').classList.remove('selectedMatchOne');
     document.querySelector('.matchTwoA').classList.remove('selectedMatchTwo');
     document.querySelector('.matchTwoB').classList.remove('selectedMatchTwo');
@@ -240,9 +260,19 @@ function selectionCheck(){
     document.querySelector('.matchThreeB').classList.remove('selectedMatchThree');
     document.querySelector('.matchFourA').classList.remove('selectedMatchFour');
     document.querySelector('.matchFourB').classList.remove('selectedMatchFour');
+    document.querySelector('.matchFiveA').classList.remove('selectedMatchFive');
+    document.querySelector('.matchFiveB').classList.remove('selectedMatchFive');
+        varSelection -= 2;
+        while(arrSelection.length) {
+            let pop = arrSelection.pop()
+            console.log(pop)
+        }
+    
    
     console.log('if is running')
 
 }
 }
+
+// e.target.className
 
