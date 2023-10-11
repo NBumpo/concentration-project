@@ -24,22 +24,22 @@ div {
     color: white;
 }
 
-.selectedMatchOne {
+.A {
     background-color: blue;
 }
 
-.selectedMatchTwo {
+.B {
     background-color: red;
 }
 
-.selectedMatchThree {
+.C {
     background-color: yellow;
 }
 
-.selectedMatchFour {
+.D {
     background-color: purple;
 }
 
-.selectedMatchFive {
+.E {
     background-color: orange;
 }

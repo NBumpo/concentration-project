@@ -128,8 +128,7 @@
 // resetBtn.addEventListener("click", init);
 
 
- let varSelection = 0;
- let arrSelection = [];
+ 
 
 
 // function init(){
@@ -141,138 +140,131 @@
 
 
 
+// CLASSES ===================
+//let varSelection = 0;
+//let arrSelection = [];
 
-// ONE ===================
-document.querySelector('.matchOneA').addEventListener('click', (e) => {
-    e.target.classList.add('selectedMatchOne');
-    e.target.classList.add('clicked');
-    (varSelection += 1);
-    arrSelection.push('blue');
-   selectionCheck();
-    return
-}
-)
-document.querySelector('.matchOneB').addEventListener('click', (e) => {
-    e.target.classList.add('selectedMatchOne',);
-    e.target.classList.add('clicked');
-    (varSelection += 1);
-    arrSelection.push('blue');
-    selectionCheck();
-    return
-}
-)
-// TWO ======================
-document.querySelector('.matchTwoA').addEventListener('click', (e) => {
-    e.target.classList.add('selectedMatchTwo',);
-    e.target.classList.add('clicked');
-    (varSelection += 1);
-    arrSelection.push('red');
-    selectionCheck();;
-    return
-}
-)
-document.querySelector('.matchTwoB').addEventListener('click', (e) => {
-    e.target.classList.add('selectedMatchTwo',);
-    e.target.classList.add('clicked');
-    (varSelection += 1);
-    arrSelection.push('red');
-    selectionCheck();
-    return
-}
-)
-// THREE ==========================
-document.querySelector('.matchThreeA').addEventListener('click', (e) => {
-    e.target.classList.add('selectedMatchThree',);
-    e.target.classList.add('clicked');
-    (varSelection += 1);
-    arrSelection.push('yellow');
-    selectionCheck();
-    return
-}
-)
-document.querySelector('.matchThreeB').addEventListener('click', (e) => {
-    e.target.classList.add('selectedMatchThree',);
-    e.target.classList.add('clicked');
-    (varSelection += 1);
-    arrSelection.push('yellow');
-    selectionCheck();
-    return
-}
-)
-// FOUR ===============================
-document.querySelector('.matchFourA').addEventListener('click', (e) => {
-    e.target.classList.add('selectedMatchFour',);
-    e.target.classList.add('clicked');
-    (varSelection += 1);
-    arrSelection.push('purple');
-   selectionCheck();
-    return
-}
-)
-document.querySelector('.matchFourB').addEventListener('click', (e) => {
-    e.target.classList.add('selectedMatchFour',);
-    e.target.classList.add('clicked');
-    (varSelection += 1);
-    arrSelection.push('purple');
-    selectionCheck();
-    return
-}
-)
-// FIVE ========
-document.querySelector('.matchFiveA').addEventListener('click', (e) => {
-    e.target.classList.add('selectedMatchFive',);
-    e.target.classList.add('clicked');
-    (varSelection += 1);
-    arrSelection.push('orange');
-    selectionCheck();
-    return
-}
-)
-document.querySelector('.matchFiveB').addEventListener('click', (e) => {
-    e.target.classList.add('selectedMatchFive',);
-    e.target.classList.add('clicked');
-    (varSelection += 1);
-    arrSelection.push('orange');
-    selectionCheck();
-    return
-}
-)
-function selectionCheck(){
-    if ((varSelection >= 2) && (arrSelection[0] === arrSelection[1])){
-        varSelection -= 2;
-        while(arrSelection.length) {
-            let pop = arrSelection.pop()
-            console.log(pop)
-        }
-    const clickedList = document.getElementsByClassName('clicked');
-        console.log(clickedList);
 
-      (clickedList[0]).style.backgroundColor = ('green');
-      (clickedList[1]).style.backgroundColor = ('green');
-      (clickedList[0].classList.remove('clicked'));
-      (clickedList[1].classList.remove('clicked'));
-    } else if (varSelection >= 2) {
-        document.querySelector('.matchOneA').classList.remove('selectedMatchOne');
-    document.querySelector('.matchOneB').classList.remove('selectedMatchOne');
-    document.querySelector('.matchTwoA').classList.remove('selectedMatchTwo');
-    document.querySelector('.matchTwoB').classList.remove('selectedMatchTwo');
-    document.querySelector('.matchThreeA').classList.remove('selectedMatchThree');
-    document.querySelector('.matchThreeB').classList.remove('selectedMatchThree');
-    document.querySelector('.matchFourA').classList.remove('selectedMatchFour');
-    document.querySelector('.matchFourB').classList.remove('selectedMatchFour');
-    document.querySelector('.matchFiveA').classList.remove('selectedMatchFive');
-    document.querySelector('.matchFiveB').classList.remove('selectedMatchFive');
-        varSelection -= 2;
-        while(arrSelection.length) {
-            let pop = arrSelection.pop()
-            console.log(pop)
-        }
+
+
+
+
+
+// // ONE ===================
+// document.querySelector('.matchOneA').addEventListener('click', (e) => {
+//     e.target.classList.add('selectedMatchOne');
+//     e.target.classList.add('clicked');
+//     (varSelection += 1);
+//     arrSelection.push('blue');
+//    selectionCheck();
+//     return
+// }
+// )
+// document.querySelector('.matchOneB').addEventListener('click', (e) => {
+//     e.target.classList.add('selectedMatchOne',);
+//     e.target.classList.add('clicked');
+//     (varSelection += 1);
+//     arrSelection.push('blue');
+//     selectionCheck();
+//     return
+// }
+// )
+
+
+// function selectionCheck(){
+//     if ((varSelection >= 2) && (arrSelection[0] === arrSelection[1])){
+//         varSelection -= 2;
+//         while(arrSelection.length) {
+//             let pop = arrSelection.pop()
+//             console.log(pop)
+//         }
+//     const clickedList = document.getElementsByClassName('clicked');
+//         console.log(clickedList);
+
+//       (clickedList[0]).style.backgroundColor = ('green');
+//       (clickedList[1]).style.backgroundColor = ('green');
+//       (clickedList[0].classList.remove('clicked'));
+//       (clickedList[1].classList.remove('clicked'));
+//     } else if (varSelection >= 2) {
+//         document.querySelector('.matchOneA').classList.remove('selectedMatchOne');
+//     document.querySelector('.matchOneB').classList.remove('selectedMatchOne');
+//     document.querySelector('.matchTwoA').classList.remove('selectedMatchTwo');
+//     document.querySelector('.matchTwoB').classList.remove('selectedMatchTwo');
+//     document.querySelector('.matchThreeA').classList.remove('selectedMatchThree');
+//     document.querySelector('.matchThreeB').classList.remove('selectedMatchThree');
+//     document.querySelector('.matchFourA').classList.remove('selectedMatchFour');
+//     document.querySelector('.matchFourB').classList.remove('selectedMatchFour');
+//     document.querySelector('.matchFiveA').classList.remove('selectedMatchFive');
+//     document.querySelector('.matchFiveB').classList.remove('selectedMatchFive');
+//         varSelection -= 2;
+//         while(arrSelection.length) {
+//             let pop = arrSelection.pop()
+//             console.log(pop)
+//         }
     
    
-    console.log('if is running')
+//     console.log('if is running')
 
-}
+// }
+// }
+
+//e.target.className
+
+//Assigning classes from an array to the div elements randomly
+
+const resetBtn = document.querySelector('.reset')
+resetBtn.addEventListener('click',init)
+
+const shuffledPairs = []
+const allDiv = document.querySelectorAll('div')
+const pairs = ['A','A','B','B','C','C','D','D','E','E']
+function randomClass(){ 
+   return Math.floor(Math.random()*pairs.length)
 }
 
-// e.target.className
+function shuffle(array) {
+    //declaring variables
+    let shuffledArray = [];
+    let usedIndexes = [];
+    let i = 0;
+
+    while (i < array.length) {
+        //stores random number from array in variable
+        let randomNumber = Math.floor(Math.random()*pairs.length);
+        //if the number is not in usedindexes...
+        if (!usedIndexes.includes(randomNumber)) {
+        //... push it into shuffleredarray...
+            shuffledArray.push(array[randomNumber]);
+
+            usedIndexes.push(randomNumber);
+            i++;
+        }
+    }
+    return shuffledArray
+}
+
+
+function init() {
+    for (i = 0; i < allDiv.length; i++) {
+        allDiv[i].removeAttribute('class')
+    }
+    shuffledArray = shuffle(pairs)
+
+    for (i = 0; i < allDiv.length; i++) {
+        allDiv[i].classList.add(shuffledArray[i])
+        console.log(allDiv)
+       console.log(allDiv[i])
+     }
+     
+}
+
+
+
+document.querySelector('main').addEventListener('click', (e) => {
+  
+
+});
+
+
+ init() 
 
