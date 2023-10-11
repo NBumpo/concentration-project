@@ -43,3 +43,10 @@ div {
 .E {
     background-color: orange;
 }
+
+.hidden {
+    background-color: black;
+}
+.correctmatch {
+    background-color: green;
+}

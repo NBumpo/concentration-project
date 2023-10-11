@@ -212,16 +212,41 @@
 
 //Assigning classes from an array to the div elements randomly
 
+//reset button
 const resetBtn = document.querySelector('.reset')
 resetBtn.addEventListener('click',init)
 
-const shuffledPairs = []
+
+
 const allDiv = document.querySelectorAll('div')
 const pairs = ['A','A','B','B','C','C','D','D','E','E']
-function randomClass(){ 
-   return Math.floor(Math.random()*pairs.length)
-}
+let clickedCards = [];
 
+
+
+
+init() 
+
+//card clicked listener event ========================
+document.querySelector("main").addEventListener('click', (e) => {
+       console.log(e.target);
+       console.log(e.target.tagName);
+       console.log(e.target.className);
+       e.target.classList.remove('hidden');
+     
+       clickedCards.push(e.target);
+       
+
+       
+       if (clickedCards.length >= 2) {
+        setTimeout(() => {
+        selectionCheck()
+        }, "500");
+       }
+    });
+
+
+    //SHUFFLE FUNCTION ======================
 function shuffle(array) {
     //declaring variables
     let shuffledArray = [];
@@ -243,28 +268,56 @@ function shuffle(array) {
     return shuffledArray
 }
 
-
+//INITIALIZE FUNCITON ==================
 function init() {
+    //removes match style class at start of game
     for (i = 0; i < allDiv.length; i++) {
         allDiv[i].removeAttribute('class')
     }
+    //pickTwo is a variable for limiting cards revealed at a time
+    pickTwo = 0
+
     shuffledArray = shuffle(pairs)
 
+    //loop for adding class to each div
     for (i = 0; i < allDiv.length; i++) {
         allDiv[i].classList.add(shuffledArray[i])
         console.log(allDiv)
        console.log(allDiv[i])
      }
+     //adding hidden class on top of match pair style
+     for (i = 0; i < allDiv.length; i++) {
+        allDiv[i].classList.add('hidden')
+       
+     }
      
+}
+
+// SELECTION CHECK FUNCTION ==========================
+function selectionCheck() {
+console.log(clickedCards[0].className)
+console.log(clickedCards[1].className)
+if (clickedCards[0].className === clickedCards[1].className){
+    console.log(clickedCards)
+    console.log(clickedCards[1])
+        clickedCards[1].classList.add('correctmatch')
+        clickedCards[0].classList.add('correctmatch')
+    clickedCards = []
+   
+} 
+else if (clickedCards[0].className !== clickedCards[1].className) {
+    (clickedCards[1].classList.add('hidden'));
+    (clickedCards[0].classList.add('hidden'));
+clickedCards = []
+
+}
+else return;
+
 }
 
 
 
-document.querySelector('main').addEventListener('click', (e) => {
-  
-
-});
 
 
- init() 
+
 
