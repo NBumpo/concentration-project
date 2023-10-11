@@ -221,8 +221,9 @@ resetBtn.addEventListener('click',init)
 const allDiv = document.querySelectorAll('div')
 const pairs = ['A','A','B','B','C','C','D','D','E','E']
 let clickedCards = [];
-
-
+let arrCorrectMatches = [];
+winP = document.createElement("p")
+winP.innerText = 'you win';
 
 
 init() 
@@ -251,6 +252,7 @@ function shuffle(array) {
     //declaring variables
     let shuffledArray = [];
     let usedIndexes = [];
+    
     let i = 0;
 
     while (i < array.length) {
@@ -270,13 +272,16 @@ function shuffle(array) {
 
 //INITIALIZE FUNCITON ==================
 function init() {
+    if (document.querySelector('main').contains(winP)){
+        document.querySelector('main').removeChild(winP)
+    }
+    arrCorrectMatches = [];
+    clickedCards = [];
     //removes match style class at start of game
     for (i = 0; i < allDiv.length; i++) {
         allDiv[i].removeAttribute('class')
     }
-    //pickTwo is a variable for limiting cards revealed at a time
-    pickTwo = 0
-
+    
     shuffledArray = shuffle(pairs)
 
     //loop for adding class to each div
@@ -302,19 +307,32 @@ if (clickedCards[0].className === clickedCards[1].className){
     console.log(clickedCards[1])
         clickedCards[1].classList.add('correctmatch')
         clickedCards[0].classList.add('correctmatch')
+        arrCorrectMatches.push(clickedCards[1].classList)
+        arrCorrectMatches.push(clickedCards[0].classList)
     clickedCards = []
-   
+    winCheck()
+  
 } 
 else if (clickedCards[0].className !== clickedCards[1].className) {
     (clickedCards[1].classList.add('hidden'));
     (clickedCards[0].classList.add('hidden'));
 clickedCards = []
 
-}
+} 
 else return;
 
 }
+function appendP() {
 
+    document.querySelector('main').appendChild(winP)
+}
+function winCheck() {
+   
+    
+    if (arrCorrectMatches.length === 10) {
+        appendP()
+    }
+}
 
 
 
