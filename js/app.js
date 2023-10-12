@@ -219,13 +219,13 @@ resetBtn.addEventListener('click',init)
 
 let wrongGuesses = 0;
 const allDiv = document.querySelectorAll('div')
-const pairs = ['A','A','B','B','C','C','D','D','E','E']
+const pairs = ['A','A','B','B','C','C','D','D','E','E','F','F']
 let clickedCards = [];
 let arrCorrectMatches = [];
 winP = document.createElement("p")
-winP.innerText = 'you win';
+winP.innerText = 'YOU WIN';
 loseP = document.createElement("p")
-loseP.innerText = 'you lose';
+loseP.innerText = 'YOU LOSE';
 
 
 init() 
@@ -235,9 +235,10 @@ document.querySelector("main").addEventListener('click', (e) => {
        console.log(e.target);
        console.log(e.target.tagName);
        console.log(e.target.className);
+       if (e.target.tagName === 'DIV') {
        e.target.classList.remove('hidden');
        clickedCards.push(e.target);
-       
+       }
 
        
        if (clickedCards.length >= 2) {
@@ -340,10 +341,12 @@ function appendLoseP() {
 }
 function winCheck() {
    
-    if (arrCorrectMatches.length === 10) {
+    if (arrCorrectMatches.length === 12) {
+       // winP.classList.add('resultsmessage')
         appendWinP()
     } 
     if (wrongGuesses >= 5) {
+       // loseP.classList.add('resultsmessage')
         appendLoseP()
     }
 }

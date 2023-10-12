@@ -1,14 +1,87 @@
 * {
     box-sizing: border-box;
-    margin: 0
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    margin: auto;
 }
 button {
     text-decoration: none;
 }
-main {
+aside {
+    float: left;
+}
+.reset {
+    
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 40px;
+    background-color: #ED2939;
+    margin: 50% 0 0 50%
+    
+}
+
+
+.reset:hover {
+    color: whitesmoke;
+  }
+  
+  
+.reset:active {
+    color: hotpink;
+  }
+
+h1 {
     display: flex;
+    margin: 5% auto auto auto;
     align-items: center;
     justify-content: center;
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 100px;
+    text-shadow: 3px 3px 4px lightslategray;
+}
+p {
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 50px;
+    
+        animation: fadeIn 3s;
+        -webkit-animation: fadeIn 3s;
+        -moz-animation: fadeIn 3s;
+        -o-animation: fadeIn 3s;
+        -ms-animation: fadeIn 3s;
+}
+      
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @-moz-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @-webkit-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @-o-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 0 25% 0 25%;
+    background-color: white;
 }
 
 /* .selected {
@@ -17,11 +90,13 @@ main {
 } */
 
 div {
-    height: 15vh;
-    width: 15vh;
+    height: 18vh;
+    width: 18vh;
     background-color: black;
     border: 1px solid white;
     color: white;
+    border-radius: 25%;
+    margin: 1%;
 }
 
 .A {
@@ -29,24 +104,63 @@ div {
 }
 
 .B {
-    background-color: red;
+    background-color: #FE5BAC;
 }
 
 .C {
-    background-color: yellow;
+    background-color: #FCFC5C
 }
 
 .D {
-    background-color: purple;
+    background-color: #9b6bca;
 }
 
 .E {
-    background-color: orange;
+    background-color: rgb(255, 145, 0);
+}
+
+.F {
+    background-color: #87CEEB;
 }
 
 .hidden {
     background-color: black;
 }
 .correctmatch {
-    background-color: green;
+    background-color: #53FCA1;
+}
+
+.resultsmessage {
+    .fade-in-text {
+        animation: fadeIn 5s;
+        -webkit-animation: fadeIn 5s;
+        -moz-animation: fadeIn 5s;
+        -o-animation: fadeIn 5s;
+        -ms-animation: fadeIn 5s;
+      }
+      
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @-moz-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @-webkit-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @-o-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      /* @-ms-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      } */
 }
