@@ -18,7 +18,11 @@ aside {
     font-family: 'Rubik Mono One', monospace;
     font-size: 40px;
     background-color: #ED2939;
-    margin: 50% 0 0 50%
+    margin: 50% 0 0 50%;
+    border: 3px solid #ED2939;
+    border-radius: 10px;
+
+    
     
 }
 
