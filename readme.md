@@ -10,10 +10,10 @@
 
 ## Screenshots
 
-![Initialized](https://imgur.com/TZpPSrI)  
-![Selecting Tiles](https://imgur.com/xGsZnNc)  
-![Lose State](https://imgur.com/Fzw66GT)  
-![Win State](https://imgur.com/stIyGQf)
+![Initialized](https://i.imgur.com/TZpPSrI.png)  
+![Selecting Tiles](https://i.imgur.com/xGsZnNc.png)  
+![Lose State](https://i.imgur.com/Fzw66GT.png)  
+![Win State](https://i.imgur.com/stIyGQf.png)
 
 
 ## Technologies Used
