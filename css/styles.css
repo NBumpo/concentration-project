@@ -218,3 +218,7 @@ div:hover {
         -o-animation: none;
         -ms-animation: none;
  }
+
+ .bordernone {
+    border: none;
+ }

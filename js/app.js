@@ -16,6 +16,7 @@ resetBtn.addEventListener('click',init)
 const attemptNumberVisual = document.querySelector('.attemptsnumber')
 const lossNumberVisual = document.querySelector('.lossnumber')
 const winNumberVisual = document.querySelector('.winnumber')
+let lose = false;
 let attemptsnumber = 6;
 let lossNumber = 0;
 let winNumber = 0;
@@ -37,7 +38,7 @@ document.querySelector("main").addEventListener('click', (e) => {
        console.log(e.target);
        console.log(e.target.tagName);
        console.log(e.target.className);
-       if ((e.target.tagName === 'DIV') && e.target.classList.contains('hidden')) {
+       if ((e.target.tagName === 'DIV') && e.target.classList.contains('hidden') && lose === false) {
        e.target.classList.remove('hidden');
        clickedCards.push(e.target);
        }
@@ -86,6 +87,7 @@ function init() {
             document.querySelector('main').removeChild(loseP)
     }
 
+    lose = false;
     attemptsnumber = 6;
     arrCorrectMatches = [];
     clickedCards = [];
@@ -153,15 +155,15 @@ function winCheck() {
     if (arrCorrectMatches.length === 12) {
        
         winNumber += 1
-
+       
         appendWinP()
         render()
     } 
     if (wrongGuesses >= 6) {
 
         lossNumber += 1;
-       
-
+        lose = true;
+        
         appendLoseP()
         render ()
     }
