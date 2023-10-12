@@ -99,6 +99,15 @@ div {
     margin: 1%;
 }
 
+div:hover {
+    color: whitesmoke;
+  }
+  
+  
+div:active {
+    color: hotpink;
+  }
+
 .A {
     background-color: blue;
 }
@@ -130,37 +139,11 @@ div {
     background-color: #53FCA1;
 }
 
-.resultsmessage {
-    .fade-in-text {
-        animation: fadeIn 5s;
-        -webkit-animation: fadeIn 5s;
-        -moz-animation: fadeIn 5s;
-        -o-animation: fadeIn 5s;
-        -ms-animation: fadeIn 5s;
-      }
-      
-      @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-      
-      @-moz-keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-      
-      @-webkit-keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-      
-      @-o-keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-      
-      /* @-ms-keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-      } */
+.lives {
+    height: 10vh;
+    width: 10vh;
+    background-color: red;
+    border: 5px solid black;
+    border-radius: 100%;
+    margin: 1%;
 }
