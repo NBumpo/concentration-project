@@ -217,13 +217,15 @@ const resetBtn = document.querySelector('.reset')
 resetBtn.addEventListener('click',init)
 
 
-
+let wrongGuesses = 0;
 const allDiv = document.querySelectorAll('div')
 const pairs = ['A','A','B','B','C','C','D','D','E','E']
 let clickedCards = [];
 let arrCorrectMatches = [];
 winP = document.createElement("p")
 winP.innerText = 'you win';
+loseP = document.createElement("p")
+loseP.innerText = 'you lose';
 
 
 init() 
@@ -234,7 +236,6 @@ document.querySelector("main").addEventListener('click', (e) => {
        console.log(e.target.tagName);
        console.log(e.target.className);
        e.target.classList.remove('hidden');
-     
        clickedCards.push(e.target);
        
 
@@ -273,10 +274,15 @@ function shuffle(array) {
 //INITIALIZE FUNCITON ==================
 function init() {
     if (document.querySelector('main').contains(winP)){
+
         document.querySelector('main').removeChild(winP)
+
+    } else if (document.querySelector('main').contains(loseP)) {
+        document.querySelector('main').removeChild(loseP)
     }
     arrCorrectMatches = [];
     clickedCards = [];
+    wrongGuesses = 0;
     //removes match style class at start of game
     for (i = 0; i < allDiv.length; i++) {
         allDiv[i].removeAttribute('class')
@@ -316,21 +322,29 @@ if (clickedCards[0].className === clickedCards[1].className){
 else if (clickedCards[0].className !== clickedCards[1].className) {
     (clickedCards[1].classList.add('hidden'));
     (clickedCards[0].classList.add('hidden'));
-clickedCards = []
-
+wrongGuesses += 1;
+clickedCards = [];
+console.log(wrongGuesses)
+winCheck()
 } 
 else return;
 
 }
-function appendP() {
+function appendWinP() {
 
     document.querySelector('main').appendChild(winP)
 }
+function appendLoseP() {
+
+    document.querySelector('main').appendChild(loseP)
+}
 function winCheck() {
    
-    
     if (arrCorrectMatches.length === 10) {
-        appendP()
+        appendWinP()
+    } 
+    if (wrongGuesses >= 5) {
+        appendLoseP()
     }
 }
 
