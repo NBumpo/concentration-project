@@ -142,3 +142,51 @@ div:hover {
     border-radius: 100%;
     margin: 1%;
 }
+
+.wins {
+    height: 10vh;
+    width: 10vh;
+    margin: 25% 0 5% 50%;
+    border: none;
+    color: black;
+    border-radius: none;
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 30px;
+}
+.wins:hover {
+    border:none;
+  }
+ .winnumber {
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 50px;
+    
+        animation: none;
+        -webkit-animation: none;
+        -moz-animation: none;
+        -o-animation: none;
+        -ms-animation: none;
+ }
+
+ .losses {
+    height: 10vh;
+    width: 10vh;
+    margin: 20% 0 0 50%;
+    border: none;
+    color: black;
+    border-radius: none;
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 30px;
+}
+.losses:hover {
+    border:none;
+  }
+ .lossnumber {
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 50px;
+    
+        animation: none;
+        -webkit-animation: none;
+        -moz-animation: none;
+        -o-animation: none;
+        -ms-animation: none;
+ }

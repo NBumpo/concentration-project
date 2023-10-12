@@ -13,7 +13,10 @@
 const resetBtn = document.querySelector('.reset')
 resetBtn.addEventListener('click',init)
 
-
+const lossNumberVisual = document.querySelector('.lossnumber')
+const winNumberVisual = document.querySelector('.winnumber')
+let lossNumber = 0;
+let winNumber = 0;
 let wrongGuesses = 0;
 const allDiv = document.querySelectorAll('main div')
 const pairs = ['A','A','B','B','C','C','D','D','E','E','F','F']
@@ -100,7 +103,7 @@ function init() {
         allDiv[i].classList.add('hidden')
        
      }
-     
+     render()
 }
 
 // SELECTION CHECK FUNCTION ==========================
@@ -145,15 +148,25 @@ function appendLoseP() {
 function winCheck() {
    
     if (arrCorrectMatches.length === 12) {
-     
+       
+        winNumber += 1
+
         appendWinP()
+        render()
     } 
     if (wrongGuesses >= 5) {
-      
+
+        lossNumber += 1
+
         appendLoseP()
+        render ()
     }
 }
 
+    function render() {
+    winNumberVisual.innerText = winNumber;
+    lossNumberVisual.innerText = lossNumber;
+    }
 
 
 
