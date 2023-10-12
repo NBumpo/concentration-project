@@ -41,7 +41,7 @@ document.querySelector("main").addEventListener('click', (e) => {
        if (clickedCards.length >= 2) {
         setTimeout(() => {
         selectionCheck()
-        }, "500");
+        }, "300");
        }
     });
 
