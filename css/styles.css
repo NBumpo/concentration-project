@@ -84,15 +84,10 @@ main {
     background-color: white;
 }
 
-/* .selected {
-    border: none;
-    background-color: rgb(60, 118, 234);
-} */
-
 div {
     height: 18vh;
     width: 18vh;
-    background-color: black;
+   
     border: 1px solid white;
     color: white;
     border-radius: 25%;
@@ -100,13 +95,9 @@ div {
 }
 
 div:hover {
-    color: whitesmoke;
+    border: rgb(165, 164, 163) solid 7px;
   }
   
-  
-div:active {
-    color: hotpink;
-  }
 
 .A {
     background-color: blue;
