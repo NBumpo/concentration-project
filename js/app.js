@@ -13,8 +13,10 @@
 const resetBtn = document.querySelector('.reset')
 resetBtn.addEventListener('click',init)
 
+const attemptNumberVisual = document.querySelector('.attemptsnumber')
 const lossNumberVisual = document.querySelector('.lossnumber')
 const winNumberVisual = document.querySelector('.winnumber')
+let attemptsnumber = 6;
 let lossNumber = 0;
 let winNumber = 0;
 let wrongGuesses = 0;
@@ -42,6 +44,7 @@ document.querySelector("main").addEventListener('click', (e) => {
       
        
        if (clickedCards.length >= 2) {
+        
         setTimeout(() => {
         selectionCheck()
         }, "300");
@@ -82,6 +85,8 @@ function init() {
             
             document.querySelector('main').removeChild(loseP)
     }
+
+    attemptsnumber = 6;
     arrCorrectMatches = [];
     clickedCards = [];
     wrongGuesses = 0;
@@ -122,13 +127,11 @@ if (clickedCards[0].className === clickedCards[1].className){
 else if (clickedCards[0].className !== clickedCards[1].className) {
     (clickedCards[1].classList.add('hidden'));
     (clickedCards[0].classList.add('hidden'));
-wrongGuesses += 1;
-clickedCards = [];
-// if (wrongGuesses >= 1){
-//     document.querySelector('.life1').classList.remove('')
-// }
-
-winCheck()
+        attemptsnumber -= 1;
+        wrongGuesses += 1;
+        clickedCards = [];
+    render()
+    winCheck()
 } 
 else return;
 
@@ -154,9 +157,10 @@ function winCheck() {
         appendWinP()
         render()
     } 
-    if (wrongGuesses >= 5) {
+    if (wrongGuesses >= 6) {
 
-        lossNumber += 1
+        lossNumber += 1;
+       
 
         appendLoseP()
         render ()
@@ -166,6 +170,7 @@ function winCheck() {
     function render() {
     winNumberVisual.innerText = winNumber;
     lossNumberVisual.innerText = lossNumber;
+    attemptNumberVisual.innerText = attemptsnumber;
     }
 
 
