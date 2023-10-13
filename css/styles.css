@@ -19,7 +19,7 @@ body {
 }
 .modetoggle:hover {
     color: rgb(232, 237, 122);
-    /* text-shadow: 1px 1px rgb(232, 237, 122); */
+   
 }
 .modetoggleNight {
     background-color: rgb(232, 237, 122);
@@ -28,7 +28,7 @@ body {
 }
 .modetoggleNight:hover {
     color: rgb(79, 79, 205);
-    /* text-shadow: 1px 1px rgb(79, 79, 205); */
+    
 }
 aside {
     float: left;
@@ -177,15 +177,6 @@ div:hover {
 .correctmatch:hover {
     border-style: none;
 }
-
-/* .lives {
-    height: 10vh;
-    width: 10vh;
-    background-color: red;
-    border: 5px solid black;
-    border-radius: 100%;
-    margin: 1%;
-} */
 
 .wins {
     height: 10vh;

@@ -1,3 +1,5 @@
+
+
 // What will happen in the game?
 // 
 //12 cards laid out in front of player
@@ -46,6 +48,7 @@ const allDiv = document.querySelectorAll('main div')
 const pairs = ['A','A','B','B','C','C','D','D','E','E','F','F']
 let clickedCards = [];
 let arrCorrectMatches = [];
+
 winP = document.createElement("p")
 winP.innerText = 'YOU WIN';
 loseP = document.createElement("p")
@@ -106,6 +109,9 @@ function shuffle(array) {
 
 //INITIALIZE FUNCITON ==================
 function init() {
+
+
+
     if (document.querySelector('main').contains(winP)){
 
             document.querySelector('main').removeChild(winP)
@@ -124,6 +130,7 @@ function init() {
     arrCorrectMatches = [];
     clickedCards = [];
     wrongGuesses = 0;
+
     //removes match style class at start of game
     for (i = 0; i < allDiv.length; i++) {
         allDiv[i].removeAttribute('class')
@@ -166,13 +173,14 @@ else if (clickedCards[0].className !== clickedCards[1].className) {
         attemptsnumber -= 1;
         wrongGuesses += 1;
         clickedCards = [];
+        
     render()
     winCheck()
 } 
 else return;
 
 
-// functions for appending the results status
+// functions for appending the results status ================
 }
 function appendWinP() {
 
@@ -196,7 +204,7 @@ function removeTries() {
     document.querySelector('main').removeChild(triesP)
 }
 
-//function for win/lose condition
+//function for win/lose condition =================
 function winCheck() {
    
     if (arrCorrectMatches.length === 12) {
@@ -225,12 +233,7 @@ function winCheck() {
     
     }
 
-    // function removeHiddenBorder() {
-    // if (document.querySelectorAll('main div').contains('hidden')){
-    //     document.querySelectorAll('main div').classList.remove('hidden')
-    //    }
-    //    return
-    // }
+    
 
 
 
