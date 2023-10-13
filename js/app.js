@@ -65,13 +65,13 @@ document.querySelector("main").addEventListener('click', (e) => {
        console.log(e.target);
        console.log(e.target.tagName);
        console.log(e.target.className);
-       if ((e.target.tagName === 'DIV') && e.target.classList.contains('hidden') && lose === false) {
+       if ((e.target.tagName === 'DIV') && e.target.classList.contains('hidden') && lose === false && clickedCards.length <= 1 ){
        e.target.classList.remove('hidden');
        clickedCards.push(e.target);
        }
       
        
-       if (clickedCards.length >= 2) {
+       if (clickedCards.length === 2) {
         
         setTimeout(() => {
         selectionCheck()
