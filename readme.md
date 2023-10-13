@@ -24,18 +24,21 @@ HTML, CSS, and JavaScript were used to build this project.
 ## Getting Started
 1. You can select up to 2 tiles at a time.
 2. There are 6 pairs of colors.
-3. 5 wrong guesses is a game over.
+3. 6 wrong guesses is a game over.
 4. Match all the tiles to win.
 5. Press reset to shuffle the tiles and start over.
+6. Reset does not delete you wins or losses record.
 
     ### Play Here
     https://NBumpo.github.io/concentration-project/
 
 ## Potential Future Enhancements
-1. Symbols for color blindness
-2. Timer countdown 
-3. Difficulty settings
-4. Different tile options
-5. Responsive design for different screen sizes
+1. Symbols for color blindness.
+2. Timer countdown .
+3. Difficulty settings.
+4. Different tile options.
+5. Responsive design for different screen sizes.
+6. Audio for clicking, matching, and winning/losing.
+7. Static or dropdown navigation bar to store settings/info pages.
 
     

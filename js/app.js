@@ -25,7 +25,7 @@ const modetoggle = document.querySelector('.modetoggle')
         document.querySelector('main').classList.add('nightmode')
         document.querySelector('.modetoggle').classList.add('modetoggleNight')
         modetoggle.innerText = 'Switch to Lightmode';
-    }else if (nightmode === true) {
+    } else if (nightmode === true) {
         nightmode = false;
         document.querySelector('body').classList.remove('nightmode')
         document.querySelector('main').classList.remove('nightmode')
@@ -68,14 +68,13 @@ document.querySelector("main").addEventListener('click', (e) => {
        console.log(e.target);
        console.log(e.target.tagName);
        console.log(e.target.className);
+       
        if ((e.target.tagName === 'DIV') && e.target.classList.contains('hidden') && lose === false && clickedCards.length <= 1 ){
        e.target.classList.remove('hidden');
        clickedCards.push(e.target);
        }
       
-       
        if (clickedCards.length === 2) {
-        
         setTimeout(() => {
         selectionCheck()
         }, "300");
