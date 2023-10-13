@@ -21,12 +21,20 @@ const modetoggle = document.querySelector('.modetoggle')
  modetoggle.addEventListener('click', function() {
     if (nightmode !== true) {
         nightmode = true;
+        triesH2.classList.add('nightmode')
+        triesP.classList.add('nightmode')
+        document.querySelector('.wins').classList.add('nightmode')
+        document.querySelector('.losses').classList.add('nightmode')
         document.querySelector('body').classList.add('nightmode')
         document.querySelector('main').classList.add('nightmode')
         document.querySelector('.modetoggle').classList.add('modetoggleNight')
         modetoggle.innerText = 'Switch to Lightmode';
     } else if (nightmode === true) {
         nightmode = false;
+        triesH2.classList.remove('nightmode')
+        triesP.classList.remove('nightmode')
+        document.querySelector('.wins').classList.remove('nightmode')
+        document.querySelector('.losses').classList.remove('nightmode')
         document.querySelector('body').classList.remove('nightmode')
         document.querySelector('main').classList.remove('nightmode')
         document.querySelector('.modetoggle').classList.remove('modetoggleNight')
