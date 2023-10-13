@@ -13,9 +13,29 @@
 const resetBtn = document.querySelector('.reset')
 resetBtn.addEventListener('click',init)
 
+
+// night/light mode toggle
+const modetoggle = document.querySelector('.modetoggle')
+ modetoggle.addEventListener('click', function() {
+    if (nightmode !== true) {
+        nightmode = true;
+        document.querySelector('body').classList.add('nightmode')
+        document.querySelector('main').classList.add('nightmode')
+        document.querySelector('.modetoggle').classList.add('modetoggleNight')
+        modetoggle.innerText = 'Switch to Lightmode';
+    }else if (nightmode === true) {
+        nightmode = false;
+        document.querySelector('body').classList.remove('nightmode')
+        document.querySelector('main').classList.remove('nightmode')
+        document.querySelector('.modetoggle').classList.remove('modetoggleNight')
+        modetoggle.innerText = 'Switch to Nightmode';
+    }
+ })
+
 const attemptNumberVisual = document.querySelector('.attemptsnumber')
 const lossNumberVisual = document.querySelector('.lossnumber')
 const winNumberVisual = document.querySelector('.winnumber')
+let nightmode = false;
 let lose = false;
 let attemptsnumber = 6;
 let lossNumber = 0;
@@ -49,6 +69,7 @@ document.querySelector("main").addEventListener('click', (e) => {
         setTimeout(() => {
         selectionCheck()
         }, "300");
+
        }
     });
 
@@ -129,6 +150,7 @@ if (clickedCards[0].className === clickedCards[1].className){
 else if (clickedCards[0].className !== clickedCards[1].className) {
     (clickedCards[1].classList.add('hidden'));
     (clickedCards[0].classList.add('hidden'));
+   
         attemptsnumber -= 1;
         wrongGuesses += 1;
         clickedCards = [];
@@ -164,6 +186,7 @@ function winCheck() {
         lossNumber += 1;
         lose = true;
         
+       
         appendLoseP()
         render ()
     }
@@ -173,8 +196,15 @@ function winCheck() {
     winNumberVisual.innerText = winNumber;
     lossNumberVisual.innerText = lossNumber;
     attemptNumberVisual.innerText = attemptsnumber;
+    
     }
 
+    // function removeHiddenBorder() {
+    // if (document.querySelectorAll('main div').contains('hidden')){
+    //     document.querySelectorAll('main div').classList.remove('hidden')
+    //    }
+    //    return
+    // }
 
 
 
