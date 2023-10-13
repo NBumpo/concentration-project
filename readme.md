@@ -35,7 +35,7 @@ HTML, CSS, and JavaScript were used to build this project.
 1. Symbols for color blindness
 2. Timer countdown 
 3. Difficulty settings
-4. Diffirent tile options
+4. Different tile options
 5. Responsive design for different screen sizes
 
     
