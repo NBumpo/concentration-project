@@ -32,7 +32,10 @@ HTML, CSS, and JavaScript were used to build this project.
     https://NBumpo.github.io/concentration-project/
 
 ## Potential Future Enhancements
-1. Wrong guesses visual
-2. Timer countdown
-3. Scoring
+1. Symbols for color blindness
+2. Timer countdown 
+3. Difficulty settings
+4. Diffirent tile options
+5. Responsive design for different screen sizes
+
     
