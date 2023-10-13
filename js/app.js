@@ -32,7 +32,8 @@ const modetoggle = document.querySelector('.modetoggle')
     }
  })
 
-const attemptNumberVisual = document.querySelector('.attemptsnumber')
+
+//const attemptNumberVisual = document.querySelector('.attemptsnumber')
 const lossNumberVisual = document.querySelector('.lossnumber')
 const winNumberVisual = document.querySelector('.winnumber')
 let nightmode = false;
@@ -49,6 +50,12 @@ winP = document.createElement("p")
 winP.innerText = 'YOU WIN';
 loseP = document.createElement("p")
 loseP.innerText = 'YOU LOSE';
+triesH2 = document.createElement("h2")
+triesH2.innerText = 'TRIES';
+triesP = document.createElement("p")
+triesP.innerText = attemptsnumber;
+
+
 
 
 init() 
@@ -107,6 +114,10 @@ function init() {
             
             document.querySelector('main').removeChild(loseP)
     }
+    
+    
+    appendTries()
+    
 
     lose = false;
     attemptsnumber = 6;
@@ -131,6 +142,7 @@ function init() {
         allDiv[i].classList.add('hidden')
        
      }
+     
      render()
 }
 
@@ -171,6 +183,19 @@ function appendLoseP() {
     document.querySelector('main').appendChild(loseP)
 }
 
+function appendTries() {
+
+    document.querySelector('main').appendChild(triesH2)
+    triesH2.classList.add('attempts')
+    document.querySelector('main').appendChild(triesP)
+    triesP.classList.add('attemptsnumber')
+}
+
+function removeTries() {
+    document.querySelector('main').removeChild(triesH2)
+    document.querySelector('main').removeChild(triesP)
+}
+
 //function for win/lose condition
 function winCheck() {
    
@@ -178,6 +203,7 @@ function winCheck() {
        
         winNumber += 1
        
+        removeTries()
         appendWinP()
         render()
     } 
@@ -186,7 +212,7 @@ function winCheck() {
         lossNumber += 1;
         lose = true;
         
-       
+        removeTries()
         appendLoseP()
         render ()
     }
@@ -195,7 +221,7 @@ function winCheck() {
     function render() {
     winNumberVisual.innerText = winNumber;
     lossNumberVisual.innerText = lossNumber;
-    attemptNumberVisual.innerText = attemptsnumber;
+    triesP.innerText = attemptsnumber;
     
     }
 
