@@ -265,4 +265,111 @@ div:hover {
 
  }
 
- 
+ @media screen and (max-width: 425px) {
+    div {
+        height: 9vh;
+        width: 9vh;
+    }
+    h1 {
+        display: flex;
+        margin: 5% auto auto auto;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Rubik Mono One', monospace;
+        font-size: 150%;
+        text-shadow: 3px 3px lightslategray;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        margin: 0 25% 0 25%;
+        background-color: white;
+    }
+    .wins {
+        height: 10vh;
+        width: 10vh;
+        margin: 5% 0 0% 30%;
+        border: none;
+        color: black;
+        border-radius: none;
+        font-family: 'Rubik Mono One', monospace;
+        font-size: 10px;
+  }
+  .winnumber {
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 30px;
+    
+        animation: none;
+        -webkit-animation: none;
+        -moz-animation: none;
+        -o-animation: none;
+        -ms-animation: none;
+ }
+ .losses {
+    height: 10vh;
+    width: 10vh;
+    margin: 0 0 0 30%;
+    border: none;
+    color: black;
+    border-radius: none;
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 10px;
+}
+.lossnumber {
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 30px;
+    
+        animation: none;
+        -webkit-animation: none;
+        -moz-animation: none;
+        -o-animation: none;
+        -ms-animation: none;
+ }
+ .reset {
+    
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 15px;
+    background-color: #ED2939;
+    margin: 5% 0 0 30%;
+    border: 3px solid #ED2939;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.modetoggle { 
+    font-family: 'Rubik Mono One', monospace;
+    background-color: rgb(79, 79, 205);
+    margin: 10% 0 0 30%;
+    color: white;
+    font-size: 10px;
+    border-radius: 5px;
+    border-style: none;
+    width: 50%
+}
+.attempts {
+    height: 10vh;
+    width: 10vh;
+    margin: 0 0 0 9%;
+    border: none;
+    color: black;
+    border-radius: none;
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 20px;
+    display: flex;
+}
+.attemptsnumber {
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 25px;
+    display:flex;
+    margin-left: 12%;
+    color: black;
+        animation: none;
+        -webkit-animation: none;
+        -moz-animation: none;
+        -o-animation: none;
+        -ms-animation: none;
+ }
+}
