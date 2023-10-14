@@ -140,13 +140,24 @@ div:hover {
   
 
 .A {
+    background-image: url("https://i.imgur.com/jkxIkK8.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: rgb(57, 57, 246);
 }
+
+
+
 .A:hover {
     border-style: none;
 }
 
 .B {
+    background-image: url("https://i.imgur.com/DMPAixV.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #FE5BAC;
 }
 .B:hover {
@@ -154,6 +165,10 @@ div:hover {
 }
 
 .C {
+    background-image: url("https://i.imgur.com/PUg60q6.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #FCFC5C
 }
 .C:hover {
@@ -161,12 +176,20 @@ div:hover {
 }
 
 .D {
+    background-image: url("https://i.imgur.com/gymaugs.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #9b6bca;
 }
 .D:hover {
     border-style: none;
 }
 .E {
+    background-image: url("https://i.imgur.com/k2i47Ri.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: rgb(238, 169, 79);
 }
 .E:hover {
@@ -174,6 +197,10 @@ div:hover {
 }
 
 .F {
+    background-image: url("https://i.imgur.com/6RIPz5K.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #87CEEB;
 }
 .F:hover {
@@ -181,12 +208,18 @@ div:hover {
 }
 
 .hidden {
+    background-image: url("https://i.imgur.com/bb7HPKx.jpg");
+    background-size: cover;
     background-color: black;
 }
 .hidden:hover {
     border: lightslategray solid 7px;
 }
 .correctmatch {
+    background-image: url('https://i.imgur.com/WQGeISf.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #53FCA1;
 }
 
