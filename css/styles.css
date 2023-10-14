@@ -270,6 +270,19 @@ div:hover {
         height: 9vh;
         width: 9vh;
     }
+    div:hover {
+        border-style: none;
+      }
+    .hidden:hover {
+        border-style: none;
+    }
+    .modetoggle:hover {
+        color: white;
+       
+    }
+    .modetoggleNight:hover {
+        color: rgb(232, 237, 122);
+    }
     h1 {
         display: flex;
         margin: 5% auto auto auto;
@@ -338,7 +351,14 @@ div:hover {
     border: 3px solid #ED2939;
     border-radius: 10px;
     text-decoration: none;
+    color: black;
 }
+.reset:hover {
+    color: black;
+  }
+  .reset:active {
+    color: hotpink;
+  }
 .modetoggle { 
     font-family: 'Rubik Mono One', monospace;
     background-color: rgb(79, 79, 205);
