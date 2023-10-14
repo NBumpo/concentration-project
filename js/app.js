@@ -16,6 +16,57 @@ const resetBtn = document.querySelector('.reset')
 resetBtn.addEventListener('click',init)
 
 
+//reveal tiles button
+let revealedTiles = false;
+const revealTilesToggle = document.querySelector('.revealtiles')
+revealTilesToggle.addEventListener('click', function(){
+
+    if (arrCorrectMatches.length < 12 && revealedTiles === false) {
+       
+    for (i = 0; i < allDiv.length; i++) {
+        allDiv[i].classList.remove('hidden')
+        revealedTiles = true;
+        clickedCards = [];
+        revealTilesToggle.innerText = 'HIDE TILES'
+    }
+    } else if (arrCorrectMatches.length < 12 && revealedTiles === true)
+      
+    for (i = 0; i < allDiv.length; i++) {
+        allDiv[i].classList.add('hidden')
+        revealedTiles = false;
+        clickedCards = [];
+        revealTilesToggle.innerText = 'REVEAL TILES'
+    }
+
+    else if (arrCorrectMatches.length === 12 && revealedTiles === false) {
+
+        
+        for (i = 0; i < allDiv.length; i++) {
+            allDiv[i].classList.remove('hidden')
+            allDiv[i].classList.remove('correctmatch')
+            revealedTiles = true;
+            clickedCards = [];
+            revealTilesToggle.innerText = 'HIDE TILES'
+        
+        } 
+        } else if (arrCorrectMatches.length === 12 && revealedTiles === true) {
+        
+        for (i = 0; i < allDiv.length; i++) {
+            
+            allDiv[i].classList.add('correctmatch')
+            revealedTiles = false;
+            clickedCards = [];
+            revealTilesToggle.innerText = 'REVEAL TILES'
+        }
+    }
+    }
+)
+
+
+
+
+
+
 // night/light mode toggle
 const modetoggle = document.querySelector('.modetoggle')
  modetoggle.addEventListener('click', function() {
@@ -128,7 +179,7 @@ function init() {
             document.querySelector('main').removeChild(loseP)
     }
     
-    
+    revealTilesToggle.innerText = 'REVEAL TILES'
     appendTries()
     
 
