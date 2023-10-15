@@ -10,10 +10,31 @@
 //When game end element appear at bottom of screen stating win or loss
 
 
-
+//music start
+const body = document.querySelector('body')
+body.addEventListener('click', function(){
+    mainTheme.play()
+})
 
 //music cache
 const mainTheme = document.querySelector('.maintheme');
+
+
+//mute toggle
+const muteToggle = document.querySelector('.mute')
+
+muteToggle.addEventListener('click', function(){
+
+    if (mainTheme.muted === false) {
+    mainTheme.muted = true;
+    muteToggle.innerText = 'UNMUTE'
+    
+    } else if (mainTheme.muted === true) {
+        mainTheme.muted = false;
+        muteToggle.innerText = 'MUTE'
+    }
+})
+
 
 //reset button
 const resetBtn = document.querySelector('.reset')
@@ -24,7 +45,7 @@ resetBtn.addEventListener('click',init)
 let revealedTiles = false;
 const revealTilesToggle = document.querySelector('.revealtiles')
 revealTilesToggle.addEventListener('click', function(){
-
+   
     if (arrCorrectMatches.length < 12 && revealedTiles === false) {
        
     for (i = 0; i < allDiv.length; i++) {
@@ -175,7 +196,7 @@ function shuffle(array) {
 //INITIALIZE FUNCITON ==================
 function init() {
 
-    mainTheme.play()
+   
 
     if (document.querySelector('main').contains(winP)){
 
@@ -218,6 +239,7 @@ function init() {
      }
      
      render()
+     
 }
 
 // SELECTION CHECK FUNCTION ==========================
@@ -297,16 +319,20 @@ function winCheck() {
     winNumberVisual.innerText = winNumber;
     lossNumberVisual.innerText = lossNumber;
     triesP.innerText = attemptsnumber;
-    
+   
     }
 
     const xMenu = '\u2716'
+    
+
+
 
     function openNav() {
         document.querySelector('.navigation').style.height = '30%';
         document.querySelector('.navcontent').style.height = '30%';
         document.querySelector('.opennavclass').innerText = '';
         document.querySelector('.closenavclass').innerText = xMenu;
+        muteToggle.innerText = 'MUTE';
         document.querySelector('.english').innerText = 'ENGLISH';
         document.querySelector('.japanese').innerText = '日本語';
         document.querySelector('.spanish').innerText = 'español';
@@ -315,6 +341,7 @@ function winCheck() {
         document.querySelector('.navigation').style.height = '0';
         document.querySelector('.navcontent').style.height = '0';
         document.querySelector('.opennavclass').innerText = 'MENU'
+        muteToggle.innerText = '';
         document.querySelector('.closenavclass').innerText = '';
         document.querySelector('.english').innerText = '';
         document.querySelector('.japanese').innerText = '';
@@ -350,7 +377,7 @@ function winCheck() {
         document.querySelector('.english').style.textDecoration = 'underline'
         document.querySelector('.japanese').style.textDecoration = 'none'
         document.querySelector('.spanish').style.textDecoration = 'none'
-        document.querySelector('h1').innerText = 'CONCENTRATE'
+        document.querySelector('h1').innerText = 'FROM-CONCENTRATE'
         document.querySelector('.reset').innerText = 'RESET'
         document.querySelector('.winsh2').innerText = 'WINS'
     }
