@@ -14,7 +14,7 @@ nav {
     color: blue;
     background-color: black;
     border-style: none;
-
+    
 
 }
 
@@ -45,7 +45,7 @@ nav {
     position: relative;
     color: black;
   left: 5%;
-  top: 50px;
+  top: 30px;
 }
 .opennavclass:hover {
     text-decoration: underline;
@@ -144,7 +144,7 @@ aside {
 
 h1 {
     display: flex;
-    margin: 5% auto auto auto;
+    margin: auto auto auto auto;
     align-items: center;
     justify-content: center;
     font-family: 'Rubik Mono One', monospace;
@@ -190,7 +190,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 50%;
-    margin: 0 25% 0 15%;
+    margin: 0 0 0 15%;
     background-color: white;
 }
 
@@ -530,7 +530,7 @@ div:hover {
     position: relative;
     color: black;
   left: 5%;
-  top: 10px;
+  top: 0;
   font-size: 25px;
 }
  }
