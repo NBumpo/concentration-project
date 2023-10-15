@@ -7,6 +7,78 @@
 body {
     margin: auto;
 }
+nav {
+    font-family: 'Rubik Mono One', monospace;
+    width: 100%;
+    height: 0;
+    color: blue;
+    background-color: black;
+    border-style: none;
+
+
+}
+
+.maintheme {
+    visibility: hidden;
+}
+
+.level {
+     color: white;
+    size: 200%;
+    text-decoration: none;
+}
+
+
+
+.level:visited {
+    color: white;
+    size: 200%;
+    text-decoration: none;
+}
+.level:hover {
+    color: white;
+    size: 200%;
+    text-decoration: underline;
+}
+.opennavclass {
+    font-family: 'Rubik Mono One', monospace;
+    position: relative;
+    color: black;
+  left: 5%;
+  top: 50px;
+}
+.opennavclass:hover {
+    text-decoration: underline;
+}
+.opennavclass:active {
+    text-decoration: none;
+    
+}
+
+.closenavclass {
+    font-size: 20em;
+}
+
+.closenavclass:hover {
+    text-decoration: underline;
+}
+.navcontent {
+
+    width: 100%;
+    height: 0;
+    border-style: none;
+}
+.navcontent:hover {
+    border-style:none;
+  }
+
+  .english {
+    height: 0;
+  }
+  .japanese {
+   font-family:'Dela Gothic One', 'sans-serif';
+  }
+
 .modetoggle { 
     font-family: 'Rubik Mono One', monospace;
     background-color: rgb(79, 79, 205);
@@ -40,9 +112,7 @@ body {
     border-style: none;
     width: 50%
 }
-/* .hidetiles {
 
-} */
 aside {
     float: left;
     height: 100%;
@@ -236,6 +306,7 @@ div:hover {
     border-radius: none;
     font-family: 'Rubik Mono One', monospace;
     font-size: 30px;
+    
 }
 .wins:hover {
     border:none;
@@ -453,9 +524,16 @@ div:hover {
         -o-animation: none;
         -ms-animation: none;
  }
+
+.opennavclass {
+    font-family: 'Rubik Mono One', monospace;
+    position: relative;
+    color: black;
+  left: 5%;
+  top: 10px;
+  font-size: 25px;
 }
-
-
+ }
 /* TABLET ================================*/
 @media screen and (max-width: 768px) {
     div {

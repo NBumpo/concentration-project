@@ -3,18 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concentration Project</title>
+    <title>Concentrate</title>
     <script defer src="js/app.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
    
 </head>
     <body>
+        <audio class='maintheme' autoplay loop controls ><source src='concentratebasetheme.mp3'></audio>
+            <nav class="navigation"> 
+               
+                <div class="navcontent">
+                <span class='closenavclass' style="font-size:30px;cursor:pointer" onclick="closeNav()">&#10005;</span> 
+                <span class="english" style="font-size:30px;cursor:pointer">English</span>
+                <span class="japanese" style="font-size:30px;cursor:pointer" >日本語</span>
+                <span class="spanish" style="font-size:30px;cursor:pointer">español</span>
+                
+                <!-- <a class='level' href="levelpages/leveltwo.html">Level 2</a> -->
+                </div>
+            </nav>
+            <section>
 
-            <h1>Concentration</h1>
+                <span class='opennavclass' style="font-size:30px;cursor:pointer" onclick="openNav()">MENU</span>
+
+
+            </section>
+            <h1>Concentrate</h1>
 
         <aside class='asideleft'>
         
@@ -23,7 +43,7 @@
             
 
                     <div class="wins">
-                        <h2>Wins</h2>
+                        <h2 class="winsh2">Wins</h2>
                         <p class="winnumber"></p>
                     </div>
                    
@@ -34,8 +54,8 @@
 
                     <button class="modetoggle">Switch to Nightmode</button>
                     <button class="revealtiles">Reveal Tiles</button>
-          
-
+                    
+                    
         </aside>
         
         <main>

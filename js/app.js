@@ -11,6 +11,10 @@
 
 
 
+
+//music cache
+const mainTheme = document.querySelector('.maintheme');
+
 //reset button
 const resetBtn = document.querySelector('.reset')
 resetBtn.addEventListener('click',init)
@@ -78,6 +82,7 @@ const modetoggle = document.querySelector('.modetoggle')
         document.querySelector('.losses').classList.add('nightmode')
         document.querySelector('body').classList.add('nightmode')
         document.querySelector('main').classList.add('nightmode')
+        document.querySelector('.opennavclass').classList.add('nightmode')
         document.querySelector('.modetoggle').classList.add('modetoggleNight')
         modetoggle.innerText = 'Switch to Lightmode';
     } else if (nightmode === true) {
@@ -88,6 +93,7 @@ const modetoggle = document.querySelector('.modetoggle')
         document.querySelector('.losses').classList.remove('nightmode')
         document.querySelector('body').classList.remove('nightmode')
         document.querySelector('main').classList.remove('nightmode')
+        document.querySelector('.opennavclass').classList.remove('nightmode')
         document.querySelector('.modetoggle').classList.remove('modetoggleNight')
         modetoggle.innerText = 'Switch to Nightmode';
     }
@@ -95,6 +101,7 @@ const modetoggle = document.querySelector('.modetoggle')
 
 
 //const attemptNumberVisual = document.querySelector('.attemptsnumber')
+document.querySelector('.english').style.textDecoration = 'underline'
 const lossNumberVisual = document.querySelector('.lossnumber')
 const winNumberVisual = document.querySelector('.winnumber')
 let nightmode = false;
@@ -168,7 +175,7 @@ function shuffle(array) {
 //INITIALIZE FUNCITON ==================
 function init() {
 
-
+    mainTheme.play()
 
     if (document.querySelector('main').contains(winP)){
 
@@ -178,6 +185,8 @@ function init() {
             
             document.querySelector('main').removeChild(loseP)
     }
+
+
     
     revealTilesToggle.innerText = 'REVEAL TILES'
     appendTries()
@@ -291,7 +300,73 @@ function winCheck() {
     
     }
 
-    
+    const xMenu = '\u2716'
+
+    function openNav() {
+        document.querySelector('.navigation').style.height = '30%';
+        document.querySelector('.navcontent').style.height = '30%';
+        document.querySelector('.opennavclass').innerText = '';
+        document.querySelector('.closenavclass').innerText = xMenu;
+        document.querySelector('.english').innerText = 'ENGLISH';
+        document.querySelector('.japanese').innerText = '日本語';
+        document.querySelector('.spanish').innerText = 'español';
+    }
+    function closeNav() {
+        document.querySelector('.navigation').style.height = '0';
+        document.querySelector('.navcontent').style.height = '0';
+        document.querySelector('.opennavclass').innerText = 'MENU'
+        document.querySelector('.closenavclass').innerText = '';
+        document.querySelector('.english').innerText = '';
+        document.querySelector('.japanese').innerText = '';
+        document.querySelector('.spanish').innerText = '';
+    }
+
+    document.querySelector('.japanese').addEventListener('click', japaneseToggle)
+    document.querySelector('.english').addEventListener('click', englishToggle)
+    document.querySelector('.spanish').addEventListener('click', spanishToggle)
+
+
+
+    function japaneseToggle() {
+        document.querySelector('h1').style.fontFamily = 'Dela Gothic One', 'sans-serif';
+        document.querySelector('.reset').style.fontFamily = 'Dela Gothic One', 'sans-serif';
+        document.querySelector('.winsh2').style.fontFamily = 'Dela Gothic One', 'sans-serif';
+        document.querySelector('.japanese').style.textDecoration = 'underline'
+        document.querySelector('.english').style.textDecoration = 'none'
+        document.querySelector('.spanish').style.textDecoration = 'none'
+        document.querySelector('h1').innerText = 'コンセントレイト'
+        document.querySelector('h1').style.letterSpacing =  '10px';
+        // '凝らす'
+        // (コンセントレーション)
+        document.querySelector('.reset').innerText = 'リセット'
+        // document.querySelector('.winsh2').innerText = 'ウィンズ'
+    }
+
+    function englishToggle() {
+        document.querySelector('h1').style.fontFamily = 'Rubik Mono One', 'monospace';
+        document.querySelector('h1').style.letterSpacing =  '0';
+        document.querySelector('.reset').style.fontFamily = 'Rubik Mono One', 'monospace';
+        document.querySelector('.winsh2').style.fontFamily = 'Rubik Mono One', 'monospace';
+        document.querySelector('.english').style.textDecoration = 'underline'
+        document.querySelector('.japanese').style.textDecoration = 'none'
+        document.querySelector('.spanish').style.textDecoration = 'none'
+        document.querySelector('h1').innerText = 'CONCENTRATE'
+        document.querySelector('.reset').innerText = 'RESET'
+        document.querySelector('.winsh2').innerText = 'WINS'
+    }
+
+    function spanishToggle() {
+        document.querySelector('h1').style.fontFamily = 'Rubik Mono One', 'monospace';
+        document.querySelector('h1').style.letterSpacing =  '0';
+        document.querySelector('.reset').style.fontFamily = 'Rubik Mono One', 'monospace';
+        document.querySelector('.winsh2').style.fontFamily = 'Rubik Mono One', 'monospace';
+        document.querySelector('.spanish').style.textDecoration = 'underline'
+        document.querySelector('.english').style.textDecoration = 'none'
+        document.querySelector('.japanese').style.textDecoration = 'none'
+        document.querySelector('h1').innerText = 'concentrar'
+        document.querySelector('.reset').innerText = 'reiniciar'
+        document.querySelector('.winsh2').innerText = 'victorias'
+    }
 
 
 
