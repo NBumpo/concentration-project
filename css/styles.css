@@ -45,7 +45,8 @@ nav {
     position: relative;
     color: black;
   left: 5%;
-  top: 30px;
+  top: 0;
+  font-size: 200%;
 }
 .opennavclass:hover {
     text-decoration: underline;
@@ -336,7 +337,9 @@ div:hover {
         -o-animation: none;
         -ms-animation: none;
  }
-
+.winsh2 {
+    white-space: nowrap;
+}
  .losses {
     height: 10vh;
     width: 10vh;

@@ -121,6 +121,12 @@ const modetoggle = document.querySelector('.modetoggle')
  })
 
 
+
+
+
+
+
+
 //const attemptNumberVisual = document.querySelector('.attemptsnumber')
 document.querySelector('.english').style.textDecoration = 'underline'
 const lossNumberVisual = document.querySelector('.lossnumber')
@@ -208,7 +214,7 @@ function init() {
     }
 
 
-    
+    closeNav()
     revealTilesToggle.innerText = 'REVEAL TILES'
     appendTries()
     
@@ -366,7 +372,7 @@ function winCheck() {
         // '凝らす'
         // (コンセントレーション)
         document.querySelector('.reset').innerText = 'リセット'
-        // document.querySelector('.winsh2').innerText = 'ウィンズ'
+        document.querySelector('.winsh2').innerText = 'ウィンズ'
     }
 
     function englishToggle() {
